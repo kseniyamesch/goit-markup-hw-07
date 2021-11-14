@@ -28,11 +28,11 @@ margin-bottom: 12px;
         border-color: var(--accent-color);
         outline: none; 
     }
+
+    &:hover ~ .modal-form-icon, &focus ~ .modal-form-icon{
+        fill: var(--accent-color);
+    }
 }
-// .modal-input:focus, .textarea:focus {
-//     border-color: var(--accent-color);
-//     outline: none;
-// }
 .textarea {
     resize: none;
     width: 100%;
@@ -73,10 +73,8 @@ color: var(--primary-text-color);
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .modal-input:hover&, .modal-input:focus& {
-        fill: var(--accent-color);
-    }
 }
+
 .submit-btn {
     margin: 0 auto;
     background-color: var(--accent-color);
@@ -116,12 +114,10 @@ left: -20px;
 top: 50%;
 transform: translateY(-50%);
 cursor: pointer;
-
-.checkbox-input:checked& {
+}
+.checkbox-input:checked ~ .check-box {
     background-image: url(../images/checked.svg);
 }
-
-.checkbox-input:focus& {
+.checkbox-input:focus ~ .check-box {
     outline: 2px solid var(--accent-color);
-}
 }

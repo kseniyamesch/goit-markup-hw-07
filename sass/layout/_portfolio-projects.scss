@@ -21,6 +21,10 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 &:nth-child(3n) {
     margin-right: 0px;
 }
+
+&:hover .overlay, &:focus .overlay {
+    transform: translateY(0);
+}
 } 
 .projects-item a {
 color: inherit;
@@ -31,7 +35,7 @@ color: inherit;
 }
 
 .title-for-projects {
- font-weight: 700;
+font-weight: 700;
 font-size: 18px;
 line-height: 2.0;
 letter-spacing: 0.06em;
@@ -46,6 +50,7 @@ margin-bottom: 4px; }
     position: relative;
     overflow: hidden;
 }
+
 .overlay {
 
     position: absolute;
@@ -57,9 +62,6 @@ margin-bottom: 4px; }
     transform: translateY(110%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .projects-item:hover&, .projects-item:focus {
-        transform: translateY(0);
-    }
 }
 .overlay-text {
     font-size: 18px;
